@@ -50,6 +50,35 @@
       ],
       "designWidth": 194
     },
+    "mi-band7": {
+      "module": {
+        "page": {
+          "pages": [
+            "pages/home/index.page",
+            "pages/library/library.page",
+            "pages/playlist/playlist.page",
+            "pages/devices/devices.page"
+          ]
+        },
+        "app-side": {
+          "path": "app-side/index"
+        },
+        "setting": {
+          "path": "setting/index"
+        }
+      },
+      "platforms": [
+        {
+          "name": "amazfit-band7",
+          "deviceSource": 253
+        },
+        {
+          "name": "amazfit-band7-w",
+          "deviceSource": 254
+        }
+      ],
+      "designWidth": 194
+    },
     "gts4mini": {
       "module": {
         "page": {

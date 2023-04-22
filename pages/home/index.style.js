@@ -110,6 +110,18 @@ const SONG = {
     text_style: hmUI.text_style.NONE,
     text: "",
   },
+  mi_band7: {
+    x: 0,
+    y: px(controlsStart + DEVICE_HEIGHT * 0.22),
+    w: px(DEVICE_WIDTH),
+    h: px(50),
+    color: 0xffffff,
+    text_size: px(36),
+    align_h: hmUI.align.CENTER_H,
+    align_v: hmUI.align.CENTER_V,
+    text_style: hmUI.text_style.NONE,
+    text: "",
+  },
   gts4mini: {
     x: 0,
     y: px(controlsStart + DEVICE_HEIGHT * 0.12),
@@ -164,6 +176,18 @@ const ARTIST = {
   band7: {
     x: 0,
     y: px(controlsStart + DEVICE_HEIGHT * 0.24),
+    w: px(DEVICE_WIDTH),
+    h: px(30),
+    color: 0xb3b3b3,
+    text_size: px(24),
+    align_h: hmUI.align.CENTER_H,
+    align_v: hmUI.align.CENTER_V,
+    text_style: hmUI.text_style.NONE,
+    text: "",
+  },
+  mi_band7: {
+    x: 0,
+    y: px(controlsStart + DEVICE_HEIGHT * 0.34),
     w: px(DEVICE_WIDTH),
     h: px(30),
     color: 0xb3b3b3,
@@ -311,6 +335,14 @@ const PROGRESS_BAR_BKG = {
     radius: px(2),
     color: 0x5e5e5e,
   },
+  mi_band7: {
+    x: px(8),
+    y: px(controlsStart + DEVICE_HEIGHT * 0.45),
+    w: px(DEVICE_WIDTH - 8),
+    h: px(4),
+    radius: px(2),
+    color: 0x5e5e5e,
+  },
   gts4mini: {
     x: px(8),
     y: px(controlsStart + DEVICE_HEIGHT * 0.35),
@@ -353,6 +385,13 @@ const PROGRESS_BAR = {
     radius: px(2),
     color: 0x1db954,
   },
+  mi_band7: {
+    x: px(8),
+    y: px(controlsStart + DEVICE_HEIGHT * 0.45),
+    h: px(4),
+    radius: px(2),
+    color: 0x1db954,
+  },
   gts4mini: {
     x: px(8),
     y: px(controlsStart + DEVICE_HEIGHT * 0.35),
@@ -389,6 +428,10 @@ const LIKE_BUTTON = {
     x: DEVICE_WIDTH / 2 - px(68),
     y: controlsStart + DEVICE_HEIGHT,
   },
+  mi_band7: {
+    x: DEVICE_WIDTH / 2 - px(68),
+    y: controlsStart + DEVICE_HEIGHT * 0.70,
+  },
   gts4mini: {
     x: DEVICE_WIDTH / 2 - px(68) - px(30),
     y: controlsStart + DEVICE_HEIGHT - px(78) - px(28),
@@ -412,6 +455,10 @@ const SHUFFLE_BUTTON = {
     x: DEVICE_WIDTH / 2 + px(20),
     y: controlsStart + DEVICE_HEIGHT + px(4),
   },
+  mi_band7: {
+    x: DEVICE_WIDTH / 2 + px(20),
+    y: controlsStart + DEVICE_HEIGHT * 0.70 + px(4),
+  },
   gts4mini: {
     x: DEVICE_WIDTH / 2 + px(20) + px(30),
     y: controlsStart + DEVICE_HEIGHT - px(74) - px(28),
@@ -434,6 +481,11 @@ const SPOTIFY_ICON = {
   band7: {
     x: DEVICE_WIDTH / 2 - px(24),
     y: controlsStart + DEVICE_HEIGHT - px(78),
+    src: "player_icon.png",
+  },
+  mi_band7: {
+    x: DEVICE_WIDTH / 2 - px(24),
+    y: controlsStart + DEVICE_HEIGHT - px(56),
     src: "player_icon.png",
   },
   gts4mini: {
@@ -535,6 +587,21 @@ export const getStyles = (deviceName) => {
       LIKE_BUTTON: LIKE_BUTTON.band7,
       SHUFFLE_BUTTON: SHUFFLE_BUTTON.band7,
       SPOTIFY_ICON: SPOTIFY_ICON.band7,
+      QUEUED_SONG: QUEUED_SONG.band7,
+    };
+  else if (deviceName == "Xiaomi Smart Band 7")
+    return {
+      DEVICES_BUTTON: DEVICES_BUTTON.band7,
+      SONG: SONG.mi_band7,
+      ARTIST: ARTIST.mi_band7,
+      PLAY_BUTTON: PLAY_BUTTON.band7,
+      NEXT_BUTTON: NEXT_BUTTON.band7,
+      PREV_BUTTON: PREV_BUTTON.band7,
+      PROGRESS_BAR_BKG: PROGRESS_BAR_BKG.mi_band7,
+      PROGRESS_BAR: PROGRESS_BAR.mi_band7,
+      LIKE_BUTTON: LIKE_BUTTON.mi_band7,
+      SHUFFLE_BUTTON: SHUFFLE_BUTTON.mi_band7,
+      SPOTIFY_ICON: SPOTIFY_ICON.mi_band7,
       QUEUED_SONG: QUEUED_SONG.band7,
     };
   else if (deviceName == "GTS 4 mini")
